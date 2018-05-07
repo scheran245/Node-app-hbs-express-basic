@@ -23,7 +23,9 @@ app.get('/',(req,res) => {
 app.get('/about',(req,res) => {
     res.render('about.hbs',{msg:'about'});
 })
-
+app.get('/projects',(req,res) => {
+    res.render('projects.hbs',{msg:'projects'});
+})
 app.listen(port,()=>{
     console.log('server upon port '+port+'!!!');
 });
