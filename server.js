@@ -2,7 +2,7 @@ const express = require ('express');
 const path = require ('path');
 const hbs = require ('hbs');
 
-
+const port = process.env.PORT || 3000;
 var app=express();
 
 hbs.registerPartials(__dirname+'/views/partials')
@@ -24,7 +24,7 @@ app.get('/about',(req,res) => {
     res.render('about.hbs',{msg:'about'});
 })
 
-app.listen(3000,()=>{
-    console.log('server upon port 3000!!');
+app.listen(port,()=>{
+    console.log('server upon port '+port+'!!!');
 });
 
